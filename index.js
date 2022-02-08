@@ -1,5 +1,7 @@
 const express = require('express');
 const projectRoutes = require('./routes/projectRoutes');
+const testimonialRoutes = require('./routes/testimonialRoutes');
+
 
 const app = express();
 app.use(express.json());
@@ -9,7 +11,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/projects', projectRoutes);
-app.use('/testimonials', projectRoutes);
+app.use('/testimonials', testimonialRoutes);
 
 
 const port = process.env.PORT || 5000;

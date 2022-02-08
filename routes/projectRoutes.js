@@ -4,51 +4,43 @@ const app = express.Router();
 
 let projects = [{
     id: 1,
-    title:"Banana",
-    stack:"Html",
-    github:"Url",
-    netlify:"Url",
-    img:"https://i.ndtvimg.com/mt/cooks/2014-11/carrots.jpg"
+    title:"Calculator",
+    stack:"Html, Css",
+    github:"https://github.com/F1uffyDe5troyer/Project-do-over",
+    netlify:"https://friendly-jennings-1a27d9.netlify.app/",
+    img:"https://i.postimg.cc/43nQDmzM/Calculator.png"
   },
   {
     id: 2,
-    title:"Banana",
-    stack:"Html",
+    title:"Css animation landing site",
+    stack:"Html, Css",
     github:"Url",
-    netlify:"Url",
-    img:"https://i.ndtvimg.com/mt/cooks/2014-11/carrots.jpg"
+    netlify:"https://eager-beaver-21dff1.netlify.app/",
+    img:"https://i.postimg.cc/nLsqdNxf/Css-animation.png"
   },
   {
     id: 3,
-    title:"Banana",
-    stack:"Html",
-    github:"Url",
-    netlify:"Url",
-    img:"https://i.ndtvimg.com/mt/cooks/2014-11/carrots.jpg"
+    title:"Dark theme site",
+    stack:"Html, Css",
+    github:"https://github.com/F1uffyDe5troyer/Nav-bar-website",
+    netlify:"https://sleepy-pare-db86c3.netlify.app/",
+    img:"https://i.postimg.cc/FHzSRw7k/Dark-theme.png"
   },
   {
     id: 4,
-    title:"Banana",
-    stack:"Html",
-    github:"Url",
-    netlify:"Url",
-    img:"https://i.ndtvimg.com/mt/cooks/2014-11/carrots.jpg"
+    title:"Flower Store",
+    stack:"Html, Css",
+    github:"https://github.com/F1uffyDe5troyer/Single-page-site",
+    netlify:"https://quizzical-lumiere-12f95f.netlify.app/",
+    img:"https://i.postimg.cc/SRm2pvBs/E-commerce.png"
   },
   {
     id: 5,
-    title:"Banana",
-    stack:"Html",
-    github:"Url",
-    netlify:"Url",
-    img:"https://i.ndtvimg.com/mt/cooks/2014-11/carrots.jpg"
-  },
-  {
-    id: 6,
-    title:"Banana",
-    stack:"Html",
-    github:"Url",
-    netlify:"Url",
-    img:"https://i.ndtvimg.com/mt/cooks/2014-11/carrots.jpg"
+    title:"First Site",
+    stack:"Html, Css",
+    github:"https://github.com/F1uffyDe5troyer/Calculator",
+    netlify:"https://sleepy-payne-35b730.netlify.app/",
+    img:"https://i.postimg.cc/fyWLP0dS/First-Site.png"
   },
 ];
 
