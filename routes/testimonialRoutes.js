@@ -41,16 +41,19 @@ let testimonials = [
     },
 ];
 
+// get objects
 app.get('/', (req, res) => {
     res.send(testimonials);
 });
 
+// get objects by id
 app.get('/:id', (req, res) => {
     const testimonial = testimonials.find((testimonial) => testimonial.id == req.params.id);
     if (!testimonial) res.status(404).send({ msg: 'testimonial not found' });
     res.send(testimonial);
 });
 
+// Add new ojects
 app.post('/', (req, res) => {
     let { full_name, comment, img} = req.body;
     if (!comment || !img || !full_name) 
@@ -66,6 +69,7 @@ app.post('/', (req, res) => {
 res.send(newTestimonial);
 });
 
+// Update entry
 app.put('/:id', (req, res) => {
     let testimonial = testimonials.find((testimonial) => testimonial.id == req.params.id);
     if (!testimonial) res.status(404).send({ msg: "Project not found" });
@@ -76,7 +80,7 @@ app.put('/:id', (req, res) => {
     res.send(testimonial);
   });
   
-
+// Delete entry
 app.delete('/:id', (req, res) => {
     testimonials = testimonials.filter((testimonial) => testimonial.id != req.params.id);
     fixArrayId(testimonials);
