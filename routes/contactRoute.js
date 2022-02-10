@@ -8,12 +8,12 @@ app.post('/', (req, res) => {
     let { name, email, message} = req.body
     const transporter = nodemailer.createTransport({
         service: 'gmail',
+        host: "smtp.gmail.com",
+        port: 465,
+        secure: true,
         auth: {
           user: 'Dalarnoricardomilago@gmail.com',
           pass: 'Jefferdefferson5!!',
-          host: "smtp.gmail.com",
-          port: 465,
-          secure: true,
         },
       });
       
