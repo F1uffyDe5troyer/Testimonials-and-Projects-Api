@@ -5,19 +5,22 @@ const nodemailer = require('nodemailer')
 const app = express.Router()
 
 app.post('/', (req, res) => {
-    let { name, email, subject, message}
+    let { name, email, message} = req.body
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-          user: 'Dalarnoricardmilago@gmail.com',
+          user: 'Dalarnoricardomilago@gmail.com',
           pass: 'Jefferdefferson5!!'
-        }
+        },
+        host: "smtp.gmail.com",
+        port: 465,
+        secure: true,
       });
       
       const mailOptions = {
         from: email,
         to: 'Dalarnoricardmilago@gmail.com',
-        subject: 'Sending Email using Node.js',
+        subject: 'Sending Email',
         text: `${name} has contacted you
         Please contact them back on ${email}
         ${message}
@@ -29,7 +32,7 @@ app.post('/', (req, res) => {
           console.log(error);
           res.status(400).send({ msg: "Email not sent" });
         } else {
-          console.log('Email sent: ' + info.response);
+          console.log('Email sent:' + info.response);
           res.send({ msg: "Email has been sent successfully" });
         }
       });
