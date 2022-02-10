@@ -10,11 +10,11 @@ app.post('/', (req, res) => {
         service: 'gmail',
         auth: {
           user: 'Dalarnoricardomilago@gmail.com',
-          pass: 'Jefferdefferson5!!'
+          pass: 'Jefferdefferson5!!',
+          host: "smtp.gmail.com",
+          port: 465,
+          secure: true,
         },
-        host: "smtp.gmail.com",
-        port: 465,
-        secure: true,
       });
       
       const mailOptions = {
