@@ -1,6 +1,6 @@
 const express = require('express')
 const nodemailer = require('nodemailer')
-
+require("dotenv").config();
 
 const app = express.Router()
 
@@ -12,8 +12,9 @@ app.post('/', (req, res) => {
         port: 465,
         secure: true,
         auth: {
-          user: 'Dalarnoricardomilago@gmail.com',
-          pass: 'Jefferdefferson5!!',
+          user: process.env.USER,
+          pass: process.env.PASS,
+          email: process.env.EMAIL,
         },
       });
       
